@@ -1,1 +1,25 @@
-server.port: ${vcap.application.port:9090}
+#server port
+server:
+ port: ${vcap.application.port:9090}
+ 
+ #cloud config properties
+spring:
+ application:
+  name: e-learning-service-discovery-eureka
+ cloud:
+  config:
+   uri: ${vcap.services.config-service.credentials.uri:http://localhost:8888}
+   
+management:
+ context-path: /admin
+ 
+ #eureka specific config properties
+eureka:
+ client:
+  registerWithEureka: false
+  fetchRegistry: false
+ instance:
+  statusPageUrlPath: /admin/info
+  healthCheckUrlPath: /admin/health
+ server:
+  waitTimeInMsWhenSyncEmpty: 0 

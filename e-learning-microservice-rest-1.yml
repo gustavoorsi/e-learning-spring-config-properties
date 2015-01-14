@@ -1,1 +1,20 @@
-server.port: ${vcap.application.port:8081}
+server:
+ port: ${vcap.application.port:8081}
+ 
+spring:
+  application:
+    name: e-learning-microservice-rest-1
+  cloud:
+    config:
+      uri: ${vcap.services.config-service.credentials.uri:http://localhost:8888}
+  profiles: cloud
+  eureka:
+   instance:
+    hostname: ${APPLICATION_DOMAIN}
+    nonSecurePort: 80
+      
+      
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:9090}/eureka/
