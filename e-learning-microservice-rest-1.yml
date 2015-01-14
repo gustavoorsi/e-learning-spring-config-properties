@@ -1,13 +1,6 @@
 server:
  port: ${vcap.application.port:8081}
  
-spring:
-  profiles: cloud
-  eureka:
-   instance:
-    hostname: localhost
-    nonSecurePort: 80
-      
 eureka:
  client:
   serviceUrl:
