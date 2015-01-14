@@ -1,2 +1,7 @@
 server:
  port: ${vcap.application.port:8082}
+
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:9090}/eureka/
