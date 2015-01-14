@@ -1,2 +1,2 @@
 server.port: ${vcap.application.port:8081}
-foo: holaaaaa
+foo: hola
