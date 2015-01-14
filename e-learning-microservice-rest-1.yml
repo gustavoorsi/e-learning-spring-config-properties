@@ -1,5 +1,4 @@
-server:
- port: ${vcap.application.port:8081}
+server.port: ${vcap.application.port:8081}
  
 spring:
   profiles: cloud
