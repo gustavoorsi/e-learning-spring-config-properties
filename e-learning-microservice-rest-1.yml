@@ -2,11 +2,6 @@ server:
  port: ${vcap.application.port:8081}
  
 spring:
-  application:
-    name: e-learning-microservice-rest-1
-  cloud:
-    config:
-      uri: ${vcap.services.config-service.credentials.uri:http://localhost:8888}
   profiles: cloud
   eureka:
    instance:
