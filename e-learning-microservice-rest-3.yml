@@ -1,8 +1,2 @@
 server:
- port: ${vcap.application.port:8083}
- 
-#point to eureka server. 
-eureka:
- client:
-  serviceUrl:
-   defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:9090}/eureka/
+ port: 8083
