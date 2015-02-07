@@ -1,17 +1,3 @@
 #server port
 server:
- port: ${vcap.application.port:9090}
- 
-management:
- context-path: /admin
- 
- #eureka specific config properties
-eureka:
- client:
-  registerWithEureka: false
-  fetchRegistry: false
- instance:
-  statusPageUrlPath: /admin/info
-  healthCheckUrlPath: /admin/health
- server:
-  waitTimeInMsWhenSyncEmpty: 0 
+ port: 9090
